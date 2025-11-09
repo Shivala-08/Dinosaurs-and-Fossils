@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Discovery | Fossils & History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <h1>Dino Discovery</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#gallery">Fossils</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#feedback">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="intro">
+            <h2>Unearthing the Past</h2>
+            <p>
+                Welcome to Dino Discovery. Paleontology is the scientific study of life that existed prior to, and sometimes including, the start of the Holocene Epoch. It includes the study of fossils to determine organisms' evolution and interactions with each other and their environments. <span class="highlight-text">Dinosaurs</span> ruled the Earth for over 140 million years!
+            </p>
+        </section>
+
+        <hr> <section id="gallery">
+            <h2>Featured Fossils</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img scr="" alt="Ammonite Fossil">
+                    <p class="caption">Ammonite Fossil</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="fossil2.jpg" alt="Trilobite Fossil">
+                    <p class="caption">Trilobite Fossil</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="fossil3.jpg" alt="Dinosaur Bone">
+                    <p class="caption">Dinosaur Bone</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="fossil4.jpg" alt="Petrified Wood">
+                    <p class="caption">Petrified Wood</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="fossil5.jpg" alt="Fish Fossil">
+                    <p class="caption">Fish Fossil</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="fossil6.jpg" alt="Fern Fossil">
+                    <p class="caption">Fern Fossil</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="resources">
+            <h2>Educational Resources</h2>
+            <p>Explore these authentic resources from world-renowned institutions.</p>
+
+            <table class="resource-table">
+                <caption>Trusted Paleontology Links</caption>
+                <thead>
+                    <tr>
+                        <th>Institution Name</th>
+                        <th>Focus Area</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Museum Resources</td>
+                        <td>UC Berkeley Museum of Paleontology</td>
+                        <td><a href="https://ucmp.berkeley.edu/" target="_blank">Visit UCMP</a></td>
+                    </tr>
+                    <tr>
+                        <td>Smithsonian National Museum</td>
+                        <td><a href="https://naturalhistory.si.edu/research/paleontology" target="_blank">Visit Smithsonian</a></td>
+                    </tr>
+                    <tr>
+                        <td>AMNH</td>
+                        <td>'OLogy' for Kids</td>
+                        <td><a href="https://www.amnh.org/research/ology" target="_blank">Visit OLogy</a></td>
+                    </tr>
+                    <tr>
+                        <td>PBS Kids</td>
+                        <td>Dinosaur Train Field Guide</td>
+                        <td><a href="https://www.pbs.org/parents/dinosaurtrain/fieldguide" target="_blank">View Guide</a></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Table data sourced from verified educational institutions.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="media">
+            <h2>Paleo Media</h2>
+            
+            <div class="media-container">
+                <div class="media-item">
+                    <h3>Dino Roar Simulation (Audio)</h3>
+                    <audio controls>
+                        <source src="https://www.soundjay.com/mechanical/sounds/mechanical-clank-1.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p><em>(Placeholder sound for demonstration)</em></p>
+                </div>
+
+                <div class="media-item">
+                    <h3>Excavation Site (Video)</h3>
+                    <video controls width="100%" poster="https://placehold.co/600x340/8b7765/FFF?text=Video+Thumbnail">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                     <p><em>(Placeholder video for demonstration)</em></p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="feedback">
+            <h2>Dino Enthusiast Feedback</h2>
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Tell us about your interests</legend>
+
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="user_name" required placeholder="Dr. Alan Grant">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="user_email" required placeholder="alan@jurassic.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fav-era">Favorite Era:</label>
+                        <select id="fav-era" name="era">
+                            <option value="">--Choose an Era--</option>
+                            <option value="triassic">Triassic</option>
+                            <option value="jurassic">Jurassic</option>
+                            <option value="cretaceous">Cretaceous</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Questions or Comments:</label>
+                        <textarea id="message" name="user_message" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send Fossil Feedback</button>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>Made with ❤️ by Pallav</p>
+    </footer>
+
+</body>
+</html>
