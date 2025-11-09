@@ -1,0 +1,251 @@
+/* --- GLOBAL RESET --- */
+/* UNIVERSAL SELECTOR (*): Resets box model for easier sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- BASE TYPOGRAPHY & BODY --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f1ea; /* Beige background */
+    color: #333333; /* Dark grey text */
+    line-height: 1.6;
+}
+
+/* --- LAYOUT UTILITIES --- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto; /* Centers block elements horizontally */
+    padding: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #8b7765; /* Brown */
+    margin: 40px 0;
+    opacity: 0.3;
+}
+
+/* --- HEADER STYLES (Background Properties & Flexbox) --- */
+#main-header {
+    /* BACKGROUND GRADIENT: A requested CSS color concept */
+    background: linear-gradient(to right, #2e4600, #556b2f); /* Dark green to light green */
+    color: #ffffff; /* White text */
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /* STICKY POSITIONING: Keeps header at top when scrolling */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#main-header .container {
+    /* FLEXBOX: Used here to align Logo and Nav side-by-side */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- NAVIGATION (Lists & Pseudo-classes) --- */
+.nav-list {
+    list-style: none; /* Removes default bullet points */
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* PSEUDO-CLASS (:hover): Changes state when mouse is over element */
+.nav-list li a:hover {
+    color: #f4f1ea; /* Beige on hover */
+    text-decoration: underline;
+}
+
+/* --- TYPOGRAPHY & INLINE ELEMENTS --- */
+h1, h2, h3 {
+    color: #2e4600; /* Dark green headings */
+    margin-bottom: 1rem;
+}
+
+/* ADJACENT SIBLING SELECTOR (+): Selects paragraph directly following an h2 */
+h2 + p {
+    font-size: 1.1rem;
+}
+
+/* SPAN styling for inline emphasis */
+.highlight-text {
+    color: #556b2f; /* Light green text */
+    font-weight: bold;
+    background-color: #e0e8d1; /* Very light green background */
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+/* --- GALLERY (Grid, Positioning & Box Model) --- */
+.gallery-grid {
+    /* CSS GRID: Excellent for 2D layouts like galleries */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.gallery-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistent look */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.caption {
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+    color: #8b7765;
+    font-size: 1.1rem;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+}
+
+/* --- TABLE STYLES (Borders & Specific Selectors) --- */
+.resource-table {
+    width: 100%;
+    border-collapse: collapse; /* Combines adjacent cell borders into one */
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.resource-table th, 
+.resource-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.resource-table th {
+    background-color: #556b2f; /* Light green header background */
+    color: white;
+}
+
+/* PSEUDO-CLASS (:nth-child): Styles every even row differently (zebra striping) */
+.resource-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.resource-table caption {
+    caption-side: top;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2e4600;
+}
+
+/* --- MEDIA SECTION (Flexbox for layout) --- */
+.media-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows items to wrap on small screens */
+}
+
+.media-item {
+    flex: 1;         /* Each item takes equal width */
+    min-width: 300px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* --- FORM STYLES (Attribute Selectors & Box Model) --- */
+fieldset {
+    border: 2px solid #556b2f;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fffdf9;
+}
+
+legend {
+    font-weight: bold;
+    color: #2e4600;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Spacing between form inputs */
+}
+
+label {
+    display: block; /* Makes label take its own line above the input */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #8b7765;
+}
+
+/* ATTRIBUTE SELECTOR: Targeting inputs specifically by their type */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit; /* Ensures inputs use the same font as body */
+}
+
+.btn-submit {
+    background-color: #2e4600;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #556b2f;
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #2e4600;
+    color: #f4f1ea;
+    font-size: 0.9rem;
+}
